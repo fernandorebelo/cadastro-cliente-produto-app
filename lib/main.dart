@@ -22,14 +22,15 @@ class _AppSistemaCadastroState extends State<AppSistemaCadastro> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
         '/': (context) => const TelaLogin(),
         '/admin': (context) => const TelaAdmin(),
-        '/cadastroproduto': (context) => const TelaAdminCadastroProduto(),
-        '/cadastrocliente': (context) => const TelaAdminCadastroCliente(),
+        '/cadastroproduto': (context) => TelaAdminCadastroProduto(),
+        '/cadastrocliente': (context) => TelaAdminCadastroCliente(),
         '/cliente': (context) => const TelaCliente(),
-        '/formulario': (context) => const TelaClienteFormulario(),
+        // '/formulario': (context) => TelaClienteFormulario(),
       },
     );
   }

@@ -20,10 +20,21 @@ class _TelaAdminState extends State<TelaAdmin> {
     Navigator.of(context).pushNamed('/cadastrocliente');
   }
 
+  deslogar() {
+    Navigator.of(context).pushNamed('/');
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: Componentes().criaAppBar('Admin', 20, Colors.white),
+      appBar: Componentes().criaAppBarIcone(
+        'Tela Admin',
+        20,
+        Colors.white,
+        const Icon(Icons.logout_rounded),
+        'Sair',
+        deslogar,
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
